@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# Installing zplug
+curl -sL zplug.sh/installer | zsh
+echo "# Loading zplug" >> ~/.zshrc
+echo "source ~/.zplug/init.sh" >> ~/.zshrc
+source ~/.zshrc
+
+# Adding prezto
+zplug "modules/prompt", from:prezto
+
+# Adding peco
+zplug "peco/peco", from:gh-r, as:command
+
+# Adding Docker completions and aliases
+
+
+# Install and load packages and commands
+zplug install
+zplug load --verbose
